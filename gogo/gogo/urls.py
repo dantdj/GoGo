@@ -23,4 +23,6 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^signup/', views.signup, name="signup"),
     url(r'^match/', views.match, name="match"),
+    url(r'^location/', views.locations, name="locations"),
+    url(r'^travelplan/', views.travelplan, name="travelplan"),
 ]
