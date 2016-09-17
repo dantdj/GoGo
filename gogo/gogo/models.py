@@ -10,6 +10,8 @@ class Traveller(models.Model):
     email = models.CharField(max_length=80)
     password = models.CharField(max_length=30)
     preferences = models.CharField(max_length=200)
+    def __str__(self):
+        return self.last_name
 
 
 class Location(models.Model):
