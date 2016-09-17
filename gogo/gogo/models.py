@@ -24,7 +24,7 @@ class Location(models.Model):
 
 class TravelPlan(models.Model):
     travel_plan_ID = models.IntegerField(primary_key=True)
-    tavel_plan_name = models.CharField(max_length=200)
+    travel_plan_name = models.CharField(max_length=200)
     traveller_ID = models.ForeignKey(Traveller)
     location_ID = models.ForeignKey(Location)
     date_from = models.DateTimeField()
