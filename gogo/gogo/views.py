@@ -1,10 +1,10 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 def index(request):
-    return HttpResponse("You've got the index page!")
+    return render(request, 'index.html')
 
 def signup(request):
-    return HttpResponse("You've got the signup page!")
+    return render(request, 'signup.html')
 
 def match(request):
-    return HttpResponse("Here's your new travelling partner/s!")
+    return render(request, 'match.html')
