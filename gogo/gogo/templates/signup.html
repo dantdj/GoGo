@@ -5,6 +5,10 @@
   </head>
 
   <body>
-    <p>Sign up!</p>
+    <h1>Sign up!</h1>
+    <form method="POST" class="traveller_form">{% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="save_button">Sign Up</button>
+    </form>
   </body>
 </html>
