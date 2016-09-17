@@ -25,5 +25,5 @@ class TravelPlan(models.Model):
     tavel_plan_name = models.CharField(max_length=200)
     traveller_ID = models.ForeignKey(Traveller)
     location_ID = models.ForeignKey(Location)
-    date_from = new DateTimeField()
-    date_to = new DateTimeField()
+    date_from = models.DateTimeField()
+    date_to = models.DateTimeField()
