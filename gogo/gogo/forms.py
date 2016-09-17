@@ -4,7 +4,7 @@ from .models import Traveller, Location, TravelPlan
 class TravellerForm(ModelForm):
     class Meta:
         model = Traveller
-        fields = ['last_name', 'first_name', 'nationality', 'mobile_number', 'email', 'password', 'preferences']
+        fields = ['first_name', 'last_name', 'nationality', 'mobile_number', 'email', 'password', 'preferences']
 
 
 class LocationForm(ModelForm):
