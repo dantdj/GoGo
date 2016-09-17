@@ -1,3 +1,17 @@
-{% if True %}
-  <li>Meet your new travelling partner/s!</li>
-{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>You've matched with {{traveller.first_name}}!</title>
+  </head>
+
+  <body>
+    <div id="displayblock">
+      <p>You've been matched with {{traveller.first_name}}!</p>
+      <p>Their contact details are as follows:</p>
+      <p>{{traveller.email}}</p>
+      <p>{{traveller.mobile_number}}</p>
+      <p>Go contact them!</p>
+    </div>
+  </body>
+</html>
