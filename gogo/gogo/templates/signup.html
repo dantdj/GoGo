@@ -1,14 +1,512 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Sign up today!</title>
-  </head>
 
-  <body>
-    <h1>Sign up!</h1>
-    <form method="POST" class="traveller_form">{% csrf_token %}
+<head>
+  <meta charset="utf-8">
+  <title>GoGo Travellers!</title>
+  <meta name="generator" content="Google Web Designer 1.6.1.0726">
+  <link href="gwdgesture_style.css" rel="stylesheet" data-version="3" data-exports-type="gwd-gesture">
+  <link href="gwdimage_style.css" rel="stylesheet" data-version="9" data-exports-type="gwd-image">
+  <link href="gwdpage_style.css" rel="stylesheet" data-version="8" data-exports-type="gwd-page">
+  <link href="gwdgallerynavigation_style.css" rel="stylesheet" data-version="4" data-exports-type="gwd-gallerynavigation">
+  <link href="gwdswipegallery_style.css" rel="stylesheet" data-version="17" data-exports-type="gwd-swipegallery">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(function() {
+      $("#datepicker").datepicker();
+    });
+    $(function() {
+      $("#datepicker2").datepicker();
+    });
+  </script>
+  <style type="text/css" id="gwd-text-style">
+    p {
+      margin: 0px;
+    }
+    h1 {
+      margin: 0px;
+    }
+    h2 {
+      margin: 0px;
+    }
+    h3 {
+      margin: 0px;
+    }
+  </style>
+  <style type="text/css">
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+    }
+    body {
+      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+      perspective: 1400px;
+      transform-style: preserve-3d;
+      background-color: transparent;
+    }
+    .gwd-div-1md6 {
+      position: absolute;
+      width: 100%;
+      left: -2.28571px;
+      border-style: solid;
+      top: 0.380952px;
+      height: 15%;
+      border-image-source: none;
+      border-color: rgb(255, 255, 255);
+      background-image: none;
+      background-color: rgb(255, 255, 255);
+    }
+    .gwd-div-9jl3 {
+      position: absolute;
+      width: 100%;
+      height: 84%;
+      left: -2px;
+      top: 60px;
+    }
+    .gwd-swipegallery-1am7 {
+      position: absolute;
+      width: 100%;
+      height: 90%;
+      border-style: solid;
+      border-image-source: none;
+      border-color: rgb(97, 97, 97);
+      left: 0px;
+      top: 61px;
+    }
+    .gwd-gallerynavigation-8m7c {
+      position: absolute;
+      width: 200px;
+      height: 50px;
+      left: 388px;
+      top: 265px;
+    }
+    .gwd-textarea-vrxq {
+      position: absolute;
+      top: 80%;
+      height: 27px;
+      width: 25%;
+      left: 20%;
+    }
+    .gwd-imagebutton-2gew {
+      position: absolute;
+      width: 8%;
+      top: 80%;
+      border-color: rgb(61, 209, 171);
+      border-image-source: none;
+      border-style: outset;
+      height: 33px;
+      left: 63.8%;
+      font-size: 15px;
+      background-image: none;
+      background-color: rgb(163, 224, 227);
+    }
+    .gwd-imagebutton-2gew2 {
+      position: absolute;
+      border-color: rgb(61, 209, 171);
+      border-image-source: none;
+      border-style: outset;
+      height: 33px;
+      font-size: 15px;
+      background-image: none;
+      background-color: rgb(163, 224, 227);
+    }
+    .gwd-div-8f9r {
+      position: absolute;
+      height: 35px;
+      top: 80%;
+      width: 8.73%;
+      left: 45.6%;
+    }
+    .gwd-div-fzrk {
+      position: absolute;
+      width: 7%;
+      height: 35px;
+      left: 52.7%;
+      top: 80%;
+    }
+    .gwd-div-tgys {
+      position: absolute;
+      width: 355px;
+      height: 61px;
+      top: 0%;
+      left: 70%;
+    }
+    .gwd-p-voy0 {
+      position: absolute;
+      left: 61%;
+      top: 1.25%;
+    }
+    .gwd-p-wb9d {
+      position: absolute;
+      height: 18px;
+      transform-origin: -267px 239.188px 0px;
+      left: 75%;
+      width: 70px;
+      top: 1.25%;
+    }
+    .gwd-textarea-hs7k {
+      position: absolute;
+      height: 19px;
+      left: 64%;
+      width: 10%;
+      top: 0.25%;
+    }
+    .gwd-textarea-1vp1 {
+      position: absolute;
+      height: 18px;
+      left: 80%;
+      width: 10%;
+      top: 0.25%;
+    }
+    .gwd-button-62wq {
+      left: 90%;
+      top: 3%;
+      width: 25px;
+      height: 15px;
+    }
+    .gwd-button-arke {
+      position: absolute;
+      height: 24px;
+      left: 92%;
+      width: 6%;
+      top: 0.28%;
+      border-color: rgb(61, 209, 171);
+      border-image-source: none;
+      border-style: outset;
+      font-size: 15px;
+      background-image: none;
+      background-color: rgb(163, 224, 227);
+    }
+    .gwd-link-ou53 {
+      position: absolute;
+      width: 117px;
+      height: 32px;
+      left: 779px;
+      top: 34px;
+    }
+    .gwd-link-c5v8 {
+      position: absolute;
+      width: 102px;
+      height: 18px;
+      left: 440px;
+      top: 29px;
+    }
+    .gwd-a-7f1a {
+      position: absolute;
+      height: 32px;
+      width: 10%;
+      top: 2%;
+      border-color: rgb(61, 209, 171);
+      border-image-source: none;
+      border-style: outset;
+      font-size: 15px;
+      left: 72.1%;
+      background-image: none;
+      background-color: rgb(163, 224, 227);
+    }
+    .gwd-a-7f1a2 {
+      position: absolute;
+      height: 32px;
+      width: 10%;
+      top: 2%;
+      border-color: rgb(61, 209, 171);
+      border-image-source: none;
+      border-style: outset;
+      font-size: 15px;
+      left: 85%;
+      background-image: none;
+      background-color: rgb(163, 224, 227);
+    }
+    .gwd-h2-11za {
+      position: absolute;
+      font-family: Oswald;
+      text-align: center;
+      font-weight: normal;
+      font-size: 45px;
+      height: 20%;
+      width: 30%;
+      border-image-source: none;
+      border-color: rgb(63, 63, 63);
+      border-style: none;
+      color: rgb(242, 242, 242);
+      left: 35%;
+      top: 50%;
+    }
+    .gwd-h2-11za2 {
+      position: absolute;
+      font-family: Oswald;
+      text-align: center;
+      font-weight: normal;
+      font-size: 20px;
+      width: 50%;
+      border-image-source: none;
+      border-color: rgb(63, 63, 63);
+      border-style: none;
+      color: rgb(242, 242, 242);
+      left: 25%;
+      top: 65%;
+      height: 10%;
+    }
+  </style><script data-source="googbase_min.js" data-version="3" data-exports-type="googbase" src="googbase_min.js"></script><script data-source="gwd_webcomponents_min.js" data-version="5" data-exports-type="gwd_webcomponents" src="gwd_webcomponents_min.js"></script>
+  <script
+  data-source="gwdgesture_min.js" data-version="3" data-exports-type="gwd-gesture" src="gwdgesture_min.js"></script><script data-source="gwdimage_min.js" data-version="9" data-exports-type="gwd-image" src="gwdimage_min.js"></script><script data-source="gwdpage_min.js" data-version="8" data-exports-type="gwd-page" src="gwdpage_min.js"></script><script data-source="gwdgallerynavigation_min.js"
+    data-version="4" data-exports-type="gwd-gallerynavigation" src="gwdgallerynavigation_min.js"></script><script data-source="gwdswipegallery_min.js" data-version="17" data-exports-type="gwd-swipegallery" src="gwdswipegallery_min.js"></script>
+    <style>
+      label, input {
+        display: block;
+      }
+      input.text {
+        margin-bottom: 12px;
+        width: 95%;
+        padding: 0.4em;
+      }
+      fieldset {
+        padding: 0px;
+        border: 0px;
+        margin-top: 25px;
+      }
+      h1 {
+        font-size: 1.2em;
+        margin: 0.6em 0px;
+      }
+      div#users-contain {
+        width: 350px;
+        margin: 20px 0px;
+      }
+      div#users-contain table {
+        margin: 1em 0px;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      div#users-contain table td, div#users-contain table th {
+        border: 1px solid rgb(238, 238, 238);
+        padding: 0.6em 10px;
+        text-align: left;
+      }
+      .ui-dialog .ui-state-error {
+        padding: 0.3em;
+      }
+      .validateTips {
+        border: 1px solid transparent;
+        padding: 0.3em;
+      }
+      .gwd-img-18m7 {
+        position: absolute;
+        width: 260px;
+        left: 27px;
+        height: 16%;
+        top: -4px;
+      }
+      .gwd-div-1gus {
+        position: absolute;
+        top: 80.05%;
+        height: 35px;
+        width: 8.73%;
+        left: 54.63%;
+      }
+    </style>
+    <script>
+      $(function() {
+        var dialog, dialog2, dialog3,form, form2, form3,
+
+          // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
+          emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+          name = $("#name"),
+          email = $("#email"),
+          password = $("#password"),
+          allFields = $([]).add(name).add(email).add(password),
+          tips = $(".validateTips");
+
+        function updateTips(t) {
+          tips
+            .text(t)
+            .addClass("ui-state-highlight");
+          setTimeout(function() {
+            tips.removeClass("ui-state-highlight", 1500);
+          }, 500);
+        }
+
+        function checkLength(o, n, min, max) {
+          if (o.val().length > max || o.val().length < min) {
+            o.addClass("ui-state-error");
+            updateTips("Length of " + n + " must be between " +
+              min + " and " + max + ".");
+            return false;
+          } else {
+            return true;
+          }
+        }
+
+        function checkRegexp(o, regexp, n) {
+          if (!(regexp.test(o.val()))) {
+            o.addClass("ui-state-error");
+            updateTips(n);
+            return false;
+          } else {
+            return true;
+          }
+        }
+
+        function addUser() {
+          var valid = true;
+          allFields.removeClass("ui-state-error");
+
+          valid = valid && checkLength(name, "username", 3, 16);
+          valid = valid && checkLength(email, "email", 6, 80);
+          valid = valid && checkLength(password, "password", 5, 16);
+
+          valid = valid && checkRegexp(name, /^[a-z]([0-9a-z_\s])+$/i, "Username may consist of a-z, 0-9, underscores, spaces and must begin with a letter.");
+          valid = valid && checkRegexp(email, emailRegex, "eg. ui@jquery.com");
+          valid = valid && checkRegexp(password, /^([0-9a-zA-Z])+$/, "Password field only allow : a-z 0-9");
+
+          if (valid) {
+            $("#users tbody").append("<tr>" +
+              "<td>" + name.val() + "</td>" +
+              "<td>" + email.val() + "</td>" +
+              "<td>" + password.val() + "</td>" +
+              "</tr>");
+            dialog.dialog("close");
+          }
+          return valid;
+        }
+
+        dialog = $("#dialog-form").dialog({
+          autoOpen: false,
+          height: 400,
+          width: 350,
+          modal: true,
+          buttons: {
+            Cancel: function() {
+              dialog.dialog("close");
+            }
+          },
+          close: function() {
+            form[0].reset();
+            allFields.removeClass("ui-state-error");
+          }
+        });
+        
+        dialog2 = $("#dialog-form2").dialog({
+          autoOpen: false,
+          height: 400,
+          width: 350,
+          modal: true,
+          buttons: {
+            Cancel: function() {
+              dialog2.dialog("close");
+            }
+          },
+          close: function() {
+            form2[0].reset();
+            allFields.removeClass("ui-state-error");
+          }
+        });
+        
+        dialog3 = $("#dialog-form3").dialog({
+          autoOpen: false,
+          height: 400,
+          width: 350,
+          modal: true,
+          buttons: {
+            Cancel: function() {
+              dialog3.dialog("close");
+            }
+          },
+          close: function() {
+            form3[0].reset();
+            allFields.removeClass("ui-state-error");
+          }
+        });
+
+        form = dialog.find("form").on("submit", function(event) {
+          event.preventDefault();
+          addUser();
+        });
+
+        form2 = dialog2.find("form").on("submit", function(event) {
+          event.preventDefault();
+          addUser();
+        });
+
+        form3 = dialog3.find("form").on("submit", function(event) {
+          event.preventDefault();
+          addUser();
+        });
+
+        $("#create-user").button().on("click", function() {
+          dialog.dialog("open");
+        });
+
+        $("#create-user2").button().on("click", function() {
+          dialog2.dialog("open");
+        });
+
+        $("#create-user3").button().on("click", function() {
+          dialog3.dialog("open");
+        });
+      });
+
+      function inputFocus(i) {
+        if (i.value == i.defaultValue) {
+          i.value = "";
+          i.style.color = "#888";
+        }
+      }
+
+      function inputBlur(i) {
+        if (i.value == "") {
+          i.value = i.defaultValue;
+          i.style.color = "#888";
+        }
+      }
+    </script>
+</head>
+
+<body>
+  <div class="gwd-div-1md6">
+    <div id="dialog-form3" title="Create new user">
+      <p class="validateTips">All form fields are required.</p>
+      <form method="POST" class="traveller_form">{% csrf_token %}
       {{ form.as_p }}
-      <button type="submit" class="save_button">Sign Up</button>
-    </form>
-  </body>
+          <!-- Allow form submission with keyboard without duplicating the dialog button -->
+        <button type="submit" class="save_button gwd-imagebutton-2gew2" style="top:90%;left:25%;width:50%">Create User Account</button>
+      </form>
+    </div>
+  </div>
+  <img class="gwd-img-18m7" src="C__Users_Same7_Downloads_14365281_10209815229486434_1713388982_n.png">
+  <div class="gwd-div-9jl3"></div>
+  <gwd-swipegallery id="gwd-swipegallery_1" scaling="stretch" class="gwd-swipegallery-1am7" autoplay="" has-navigation="" images="https://cdn01.vulcanpost.com/wp-uploads/2014/11/Backpackers-and-Travellers-Taking-Pictures-of-Mountains.jpg,http://d2slvvdd87p1qe.cloudfront.net/wp-content/uploads/2015/04/young-people-enjoying-beach-party-2-1050x569.jpg"
+  transition-duration="1500" autoplay-duration="5000"></gwd-swipegallery>
+  <gwd-gallerynavigation id="gwd-gallerynavigation_1" class="gwd-gallerynavigation-8m7c"></gwd-gallerynavigation>
+<form name="tform" action="../Travellers/Travellers.html" method="get">
+  <input type="text" Name="location" style="color: #888" class="gwd-textarea-vrxq" value="Location" onfocus="inputFocus(this)" onblur="inputBlur(this)">
+  <div class="gwd-div-8f9r">
+    <input id="datepicker" Name="q_from" style="width: 99%; height: 27px; color: #888" value="From">
+  </div>
+  <div class="gwd-div-1gus">
+    <input id="datepicker2" Name="q_to" style="width: 99%; height: 27px; color: #888" value="To">
+  </div>
+  <input type="submit" class="gwd-imagebutton-2gew" bgcolor="#A3E0E3" value="Search"> 
+</form>
+<div id="dialog-form2" title="Log In">
+<form method="POST" class="traveller_form">{% csrf_token %}
+      {{ form.as_p }}
+<!--  <p class="gwd-p-voy0">Email</p>
+  <p class="gwd-p-wb9d">Password</p>
+  <input type="text" class="gwd-textarea-hs7k">
+  <input type="password" class="gwd-textarea-1vp1"> -->
+  <button type="submit" class="save_button gwd-imagebutton-2gew2" style="top:90%;left:25%;width:50%">Log In</button>
+</form>
+</div>
+  <button type="button" class="gwd-a-7f1a" id="create-user3" bgcolor="#A3E0E3">Sign Up</button>
+  <button type="button" class="gwd-a-7f1a2" id="create-user2" bgcolor="#A3E0E3">Log In</button>
+  <h1 class="gwd-h2-11za">Travel for fun!</h1> <br>
+  
+  <h3 class="gwd-h2-11za2">Travelling alone is not a problem anymore!</h3>
+</body>
+
 </html>
