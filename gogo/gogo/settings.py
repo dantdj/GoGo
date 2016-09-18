@@ -116,8 +116,8 @@ USE_TZ = True
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'dantdj@gmail.com'
-EMAIL_HOST_PASSWORD = 'AltarianProd1'
+EMAIL_HOST_USER = 'gogowebemail@gmail.com'
+EMAIL_HOST_PASSWORD = 'hackzurich2016'
 EMAIL_PORT = 587
 
 # Static files (CSS, JavaScript, Images)
